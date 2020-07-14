@@ -27,5 +27,6 @@ module MovieSelectorApiJune2020
           expose: %w(access-token expiry token-type uid client),
           max_age: 0
       end
+    end  
   end
 end
