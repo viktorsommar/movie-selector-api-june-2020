@@ -1,4 +1,4 @@
-require 'rails_helper'
+
 
 RSpec.describe 'Get /api/v0/movies', type: :request do
 describe 'successfully' do
@@ -16,7 +16,7 @@ describe 'successfully' do
     end
 
     it 'is expected to return a batman movie' do
-        expect(@response_json["results"]).to eq 'Batman'
+        expect(@response_json["results"].first["title"]).to eq 'Batman'
 end
 end
 end
