@@ -7,17 +7,20 @@
       ],
       "/Users/felixwillborg/movie-selector-api-june-2020/app/controllers/api/v0/movies_controller.rb": [
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
-        2,
-        2,
-        2,
-        2,
-        null,
-        2,
-        0,
-        null,
-        2,
-        null,
+        1,
         null,
         null
       ],
@@ -54,6 +57,6 @@
         0
       ]
     },
-    "timestamp": 1594807579
+    "timestamp": 1594885875
   }
 }

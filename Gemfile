@@ -10,11 +10,10 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'rest-client'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
-  gem 'rails-pry'
+  gem 'pry-rails'
   gem 'coveralls', require: false
 end
 
