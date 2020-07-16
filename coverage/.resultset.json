@@ -5,7 +5,7 @@
         1,
         null
       ],
-      "/Users/felixwillborg/movie-selector-api-june-2020/app/controllers/api/v0/movies_controller.rb": [
+      "/Users/felixwillborg/movie-selector-api-june-2020/app/controllers/api/v1/movies_controller.rb": [
         1,
         1,
         3,
@@ -50,6 +50,6 @@
         0
       ]
     },
-    "timestamp": 1594907475
+    "timestamp": 1594907784
   }
 }

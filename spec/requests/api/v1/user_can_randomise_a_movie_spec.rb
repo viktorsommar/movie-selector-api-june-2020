@@ -1,7 +1,7 @@
-RSpec.describe 'Get /api/v0/movies', type: :request do
+RSpec.describe 'Get /api/v1/movies', type: :request do
   describe 'successfully' do
     before do 
-      get '/api/v0/movies/random'
+      get '/api/v1/movies/random'
     end
 
     it 'is expected to get a 200 response' do

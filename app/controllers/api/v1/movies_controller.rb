@@ -1,4 +1,4 @@
-class Api::V0::MoviesController < ApplicationController
+class Api::V1::MoviesController < ApplicationController
   def show 
     random_page = rand(1..500)
     api_endpoint = "https://api.themoviedb.org/3/discover/movie?api_key=80089a9e6edb5f524156c569cd8a9a69&page=#{random_page}"
