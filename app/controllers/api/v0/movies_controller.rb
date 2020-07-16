@@ -1,17 +1,11 @@
 class Api::V0::MoviesController < ApplicationController
-  # def index
-  #   api_endpoint = "https://api.themoviedb.org/3/search/movie?api_key=80089a9e6edb5f524156c569cd8a9a69"
-  #   search_string = params[:query]
-  #   results = RestClient.get(api_endpoint + "&query=#{search_string}")
-  #   movies = JSON.parse(results.body)
-
-  #   if movies["results"].empty?
-  #     render json: { message: "No results found" }, status: 404
-  #   else
-  #     render json: { results:movies["results"] }
-  #   end
-  # end
+  
   def show 
-    binding.pry
+    random_page = rand(1..500)
+    api_endpoint = "https://api.themoviedb.org/3/discover/movie?api_key=80089a9e6edb5f524156c569cd8a9a69&page=#{random_page}"
+    results = RestClient.get(api_endpoint)
+    movies = JSON.parse(results.body)["results"]
+    random_movie = movies[rand(1..(movies.count))]
+    render json: {movie:random_movie}
   end
 end
