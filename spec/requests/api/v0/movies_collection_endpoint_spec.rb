@@ -11,5 +11,9 @@ RSpec.describe 'Get /api/v0/movies', type: :request do
     it 'is expected to return a movie' do
       expect(response_json["movie"]).to include("title")
     end
+
+    it 'is expected to not return an array' do
+      expect(response_json).to_not be_an Array
+    end
   end
 end
