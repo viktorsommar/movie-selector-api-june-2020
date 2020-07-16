@@ -1,5 +1,7 @@
 require 'coveralls'
 Coveralls.wear_merged!('rails')
+require 'webmock/rspec'
+WebMock.enable!
 
 ENV['RAILS_ENV'] ||= 'test'
 
@@ -26,6 +28,11 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
   config.include ResponseJSON
+  config.before do
+    movie_db = "https://api.themoviedb.org/3/discover"
+    stub_request(:get, %r[#{movie_db}.*])
+         .to_return(status: 200, body: file_fixture("random_movie_response.json").read, headers: {})
+  end
 end
 
 Shoulda::Matchers.configure do |config|

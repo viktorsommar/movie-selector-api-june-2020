@@ -8,12 +8,8 @@ RSpec.describe 'Get /api/v0/movies', type: :request do
       expect(response).to have_http_status 200
     end
 
-  #   it 'is expected to return a collection of movies in an array' do 
-  #     expect(@response_json["results"]).to be_an Array
-  #   end
-
-  #   it 'is expected to return a batman movie' do
-  #     expect(@response_json["results"].first["title"]).to eq 'Batman'
-  #   end
+    it 'is expected to return a movie' do
+      expect(response_json["movie"]).to include("title")
+    end
   end
 end
