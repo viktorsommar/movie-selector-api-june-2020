@@ -9,7 +9,7 @@ RSpec.describe 'Get /api/v1/movies', type: :request do
     end
 
     it 'is expected to return a movie' do
-      expect(response_json["movie"]).to include("title")
+      expect(response_json["movie"]["title"]).to eq "For Your Eyes Only"
     end
 
     it 'is expected to not return an array' do
