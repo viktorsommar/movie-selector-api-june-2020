@@ -4,7 +4,7 @@ class Api::V1::SubscriptionsController < ApplicationController
   def create
     payment_status = perform_stripe_payment
 
-    if payment_status == true
+    if payment_status[:paid] == true
       current_user.update_attribute(:subscriber, true)
       render json: { paid: true, message: "Successful payment, you are now a subscriber." }
     else
@@ -16,7 +16,7 @@ class Api::V1::SubscriptionsController < ApplicationController
 private
 
   def perform_stripe_payment
-    custumer = Stripe::Customer.create(
+      customer = Stripe::Customer.create(
       email: current_user.email,
       source: params[:stripeToken],
       description: 'Movie Selector'

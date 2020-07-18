@@ -9,6 +9,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors', require: 'rack/cors'
 gem 'rest-client'
 gem 'devise_token_auth'
+gem 'stripe-rails'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -17,6 +18,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'coveralls', require: false
   gem 'webmock'
+  gem 'stripe-ruby-mock', '~> 2.5.6', require: 'stripe_mock'
 end
 
 group :development do

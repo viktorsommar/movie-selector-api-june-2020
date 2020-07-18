@@ -33,6 +33,12 @@ RSpec.configure do |config|
     stub_request(:get, %r[#{movie_db}.*])
          .to_return(status: 200, body: file_fixture("random_movie_response.json").read, headers: {})
   end
+  config.before(:each) do
+    StripeMock.start
+  end
+  config.after(:each) do
+    StripeMock.stop
+  end
 end
 
 Shoulda::Matchers.configure do |config|
