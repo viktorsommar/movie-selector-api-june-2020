@@ -3,7 +3,9 @@ RSpec.describe 'POST /api/v1/watchlist_items', type: :request do
   let(:subscriber_credentials) { subscriber.create_new_auth_token }
   let(:subscriber_headers) { {HTTP_ACCEPT: 'application/json'}.merge!(subscriber_credentials)}
 
-  
+  let!(:watchlist) {create(:watchlist, user_id: subscriber.id)}
+  let!(:watchlist_item) { create(:watchlist_item, movie_db_id: 12, title: 'Batman', watchlist: watchlist)}
+
   describe 'successfully' do
     before do 
       post '/api/v1/watchlist_items',

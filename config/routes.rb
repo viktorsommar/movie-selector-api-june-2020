@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :movies, only: [:show]
-      resources :watchlist_items, only: [:create], constraints: { format: 'json'}
+      resources :watchlist_items, only: [:create], constraints: { format: 'json' }
     end
   end
 end

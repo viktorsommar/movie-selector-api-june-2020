@@ -1,4 +1,4 @@
-class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]
+useclass DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]
   def change
     
     create_table(:users) do |t|
@@ -38,7 +38,6 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]
       t.string :current_sign_in_ip
       t.string :last_sign_in_ip
       t.integer :sign_in_count, default: 0
-
       t.timestamps
     end
 
