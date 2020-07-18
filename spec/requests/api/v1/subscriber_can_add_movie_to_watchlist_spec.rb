@@ -6,7 +6,7 @@ RSpec.describe 'POST /api/v1/watchlist_items', type: :request do
   
   describe 'successfully' do
     before do 
-      get '/api/v1/watchlist_items',
+      post '/api/v1/watchlist_items',
       params: {
         movie_db_id: 699,
         title: 'For Your Eyes Only'
