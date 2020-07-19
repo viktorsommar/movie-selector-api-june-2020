@@ -6,5 +6,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-	has_one :watchlist
+  has_one :watchlist
+  
+  def create_watchlist
+  Watchlist.create(user_id: id)
+  end
 end
