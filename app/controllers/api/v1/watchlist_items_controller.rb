@@ -1,5 +1,6 @@
 class Api::V1::WatchlistItemsController < ApplicationController
   before_action :authenticate_user!
+  
   def create
     if current_user.subscriber
       if current_user.watchlist.nil?
