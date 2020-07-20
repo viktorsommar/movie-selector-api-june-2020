@@ -19,6 +19,7 @@ group :development, :test do
   gem 'coveralls', require: false
   gem 'webmock'
   gem 'stripe-ruby-mock', '~> 2.5.6', require: 'stripe_mock'
+  gem 'active_model_serializers'
 end
 
 group :development do

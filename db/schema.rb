@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(version: 2020_07_17_152156) do
   end
 
   create_table "watchlist_items", force: :cascade do |t|
+    t.bigint "watchlist_id", null: false
     t.string "title"
     t.integer "movie_db_id", null: false
-    t.bigint "watchlist_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["watchlist_id"], name: "index_watchlist_items_on_watchlist_id"

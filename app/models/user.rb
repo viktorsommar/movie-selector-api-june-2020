@@ -1,14 +1,20 @@
 # frozen_string_literal: true
 
 class User < ActiveRecord::Base
-	extend Devise::Models
+#    after_create :create_watchlist
+
+  extend Devise::Models
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
   has_one :watchlist
   
-  def create_watchlist
-  Watchlist.create(user_id: id)
-  end
+
+
+  private
+  
+#   def create_watchlist
+#   watchlist.create(user: self)
+#   end
 end
