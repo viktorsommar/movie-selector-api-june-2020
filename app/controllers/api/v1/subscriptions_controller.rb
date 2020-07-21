@@ -20,7 +20,7 @@ private
     )
     charge = Stripe::Charge.create(
       customer: customer.id,
-      amount: 29,
+      amount: 2900,
       currency: 'sek'
     )
     charge 
