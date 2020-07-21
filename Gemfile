@@ -10,6 +10,7 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'rest-client'
 gem 'devise_token_auth'
 gem 'stripe-rails'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -19,7 +20,6 @@ group :development, :test do
   gem 'coveralls', require: false
   gem 'webmock'
   gem 'stripe-ruby-mock', '~> 2.5.6', require: 'stripe_mock'
-  gem 'active_model_serializers'
 end
 
 group :development do
