@@ -1,10 +1,8 @@
-# frozen_string_literal: true
-
 class User < ActiveRecord::Base
-	extend Devise::Models
+  extend Devise::Models
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-	has_one :watchlist
+  has_one :watchlist
 end
